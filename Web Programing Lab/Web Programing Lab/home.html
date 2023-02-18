@@ -1,0 +1,48 @@
+<html>
+ <head><title>String and math object</title></head>
+ <body bgcolor="peach">
+ <center>
+ <h1><u>STRING AND MATH METHODS IN JAVASCRIPT</h1></u><br>
+ <h1>String Functions</h1><br><br>
+ Enter first string : str1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <input type="text" id="string1"/><br><br>
+ Enter second string : str2 &nbsp;
+ <input type="text" id="string2"/><br><br>
+ Select a string method : 
+ <select id="strmethod">
+ <option value="strupper">str1.toUpperCase()</option>
+ <option value="strlower">str1.tolowerCase()</option>
+ <option value="strconcat">str1.concat(str2)</option>
+ <option value="spliting">str1.split()</option>
+ <option value="triming">str1.trim()</option>
+ </select><br><br><br>
+ <button onclick="stringoperations()">Perform</button><br>
+ <p id="para1"></p>
+ <input type="text" id="btn1"/>
+<br><br><br>
+ <h1>Math Functions</h1><br><br>
+ Enter first number : num1 &nbsp;&nbsp;&nbsp;
+ <input type="text" id="n1"/><br><br>
+ Enter second number : num2
+ <input type="text" id="n2"/><br><br>
+ Enter third number : num3 &nbsp;&nbsp;&nbsp;&nbsp;
+ <input type="text" id="n3"/><br><br>
+ Select a math method:
+ <select id="matmethod">
+ <option value="mround">Math.round(n1)</option>
+ <option value="mabs">Math.abs(n1)</option>
+ <option value="mfloor">Math.floor(n1)</option>
+ <option value="mceil">Math.ceil(n1)</option>
+ <option value="mpow">Math.pow(n1,n2)</option>
+ <option value="msqrt">Math.sqrt(n1)</option>
+ <option value="mtrunc">Math.trunc(n1)</option>
+ <option value="mmax"> Math.max(num1,num2,num3)</option>
+ <option value="mmin">Math.min(num1,num2,num3)</option>
+ </select><br><br><br>
+ <button onclick="mathoperations()">Peform</button><br>
+ <p id="para2"></p>
+ <input type="text" id="btn2"/>
+ </center>
+ <script src="homejavascript.js"></script>
+ </body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+</head>
+<style>
+table{
+background-color: white;
+margin-left: auto;
+margin-right: auto;
+margin-top:1em;
+padding:1em;
+box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+tr,td,th{
+padding:1em;
+text-align: left;
+}
+.center th{
+text-align: center;
+}
+h2{
+text-align: center;
+margin-top: 2em;
+background-color:black;
+color: white;
+}
+</style>
+<body>
+<h2><center>MCA Department Library</h2>
+<form id="form1" >
+<table>
+
+<tr><td>Name: </td><td> 
+<input type="text" id="name" minlength="3" oninput="this.value = this.value.toUpperCase()" required/></td></tr> 
+
+<tr><td>Admission Number: </td><td> 
+<input type="text" id="adm" minlength="6" maxlength="6" oninput="this.value = this.value.toUpperCase()" required></td></tr>
+
+<tr><td>Email: </td> <td> 
+<input type="email" id="email" required></td></tr> 
+
+<tr><td>Mobile Number: </td> <td> 
+<input type="tel"  minlength="10" maxlength="10" name="Number" id="Number"   placeholder="Country Code not needed" oninput="this.value = this.value.replace(/[^0-9+()]/g, '');" required/></td></tr> 
+
+<tr><td>Password: </td> 
+<td><input type="password" id="p1"  minlength="8" maxlength="15" pattern="(?=.*\d)(?=.*[!/@/#/$/%/^/&/*/(/)/_/-/?/=/</>/,/./|/])(?=.*[A-Z])(?=.*[0-9]).{8,}"
+ required></td></tr> 
+
+<tr><td>Confirm Password: </td> 
+<td><input type="password" id="p2"  minlength="8" maxlength="15" pattern="(?=.*\d)(?=.*[!/@/#/$/%/^/&/*/(/)/_/-/?/=/</>/,/./|/])(?=.*[A-Z])(?=.*[0-9]).{8,}" required></td></tr> 
+
+<tr><td>Gender: </td> 
+<td> <input type="radio" name="gender" value="Male" required><label>Male</label>
+<input type="radio" name="gender" value="Female" required><label>Female</label></td></tr>
+
+<td><input type="checkbox" id="tick" required><label>I abide to follow the rules and regulations. </label></td></tr>
+
+<tr><td><input type="submit" id="s" value="Submit" onclick=validate()> 
+<input type="reset" value="Reset"></td></tr>
+
+</table>
+</form> 
+</div>
+</form>
+</body>
+<script>
+function validate()
+{
+var n=document.getElementById("name").value; 
+var letters = /^[A-Za-z,/ /']+$/;   
+var p1=document.getElementById("p1").value;  
+var p2=document.getElementById("p2").value; 
+var adm=document.getElementById("adm").value;
+var admission = /^[A-Z0-9]+$/; 
+if(!admission.test(adm))  
+{  
+alert("Invalid Admission Number");  
+} 
+else if(!letters.test(n))  
+{  
+alert("Name format is incorrect. Must contain alphabets,commas,spaces and apostrophies only");  
+}
+else if(p1!=p2)  
+{  
+alert("Passwords not matching");  
+} 
+else 
+{  
+alert("Thank you for submitting. Your application will be processed.");  
+} 
+}
+</script>
+</html>

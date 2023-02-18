@@ -1,0 +1,20 @@
+<html>
+ <head>
+ <script>
+ function changebg()
+ { 
+ document.getElementById("img").src="bg0.jpg";
+ document.getElementById("text").innerText="Itachi uchiha!"
+ }
+ </script>
+ </head>
+ <body>
+ <center>
+ <h1>If mouse comes over image and text changes</h1>
+ <div onmouseover="changebg()" style="height: 50%;" >
+ <img src="bg1.jpg" id="img" style="width:50%;height:90%"><br>
+ <h3 id="text">Call me...</h3>
+ </div>
+ </center>
+ </body>
+</html>

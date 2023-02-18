@@ -1,0 +1,19 @@
+body{
+font-family:Arial;
+background-image: url(bg1.jpg);
+padding:2;
+margin:4;
+}
+h1
+height: auto;
+width:fit-content;
+background-color:Black;
+color:cyan;
+text-decoration:underline:
+padding:2;
+margin:4;
+}
+div{
+padding:2px,2px,2px,2px;
+margin:4;
+}

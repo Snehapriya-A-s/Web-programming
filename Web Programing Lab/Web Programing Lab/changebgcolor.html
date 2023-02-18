@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+ function change_bgcolor()
+ {
+ var x=Math.random()
+ var cl="#" ,y=String(x)
+ for(i=2;i<8;i++)
+ {
+ cl=cl+y[i];
+ } 
+ document.bgColor=cl;
+ }
+</script>
+</head>
+<body>
+<br><br><br>
+<center><h1>CLICK THE BUTTON BELOW TO CHANGE THE BACKGROUND COLOUR</h1>
+<input type="button" onclick="change_bgcolor()" value="CLICK" 
+style="height: 5%;width: 5%;border-color:white;background-color: black;color:white;">
+</center>
+</body>
+</html>
